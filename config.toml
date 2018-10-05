@@ -59,16 +59,14 @@ enableGitInfo = false
   organizations = [ { name = "Indian Institute of Technology Kanpur", url = "" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
-  avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-
-  # Details for the Contact Widget
-  email = "test@example.org"
-  address = "Building 1 Room 1, Stanford University, California, 90210, USA"
-  office_hours = "Monday 10:00 to 13:00 or email for appointment"
-  phone = "888 888 88 88"
-  skype = "echo123"
-  telegram = ""
-  keybase = ""  # Your keybase.io username.
+  avatar = "pic.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
+  email = "pratvish@cse.iitk.ac.in"
+  address = "RM 511, Rajeev Motwani Building, CSE, IIT Kanpur"
+  #office_hours = "Monday 10:00 to 13:00 or email for appointment"
+  #phone = "888 888 88 88"
+  #skype = "echo123"
+  #telegram = ""
+  #keybase = ""  # Your keybase.io username.
 
   # Discussion link (e.g. link to a forum, mailing list, or chat).
   #   Uncomment line below to use.
