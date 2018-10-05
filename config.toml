@@ -1,24 +1,26 @@
 # Configuration of Academic
 # Documentation: https://sourcethemes.com/academic/
+#
+# This file is formatted using TOML syntax - learn more at https://learnxinyminutes.com/docs/toml/
+# Each configuration section is defined by a name in square brackets (e.g. `[outputs]`).
 
 # The URL of your website.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
 baseurl = "/"
 
 # Title of your site
-title = "Ryan A Hill"
+title = "Prateek Vishnoi"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
 copyright = "&copy; 2018"
 
-theme = "hugo-academic"
+theme = "academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
 paginate = 10
-publishDir = "../ryan-hill.github.io"
 
 # Enable comments by entering your Disqus shortname
 disqusShortname = ""
@@ -28,14 +30,18 @@ googleAnalytics = ""
 
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "en"
+hasCJKLanguage = false  # Set `true` for Chinese/Japanese/Korean languages.
 defaultContentLanguageInSubdir = false
 
+# Get last modified date for content from Git?
+enableGitInfo = false
+
 [outputs]
-  home = [ "HTML", "CSS", "RSS" ]
+  home = [ "HTML", "CSS", "RSS", "JSON" ]
   section = [ "HTML", "RSS" ]
 
 # Configure BlackFriday Markdown rendering.
-#   See: https://gohugo.io/readfiles/bfconfig/
+#   See: https://gohugo.io/getting-started/configuration/#configure-blackfriday
 [blackfriday]
   hrefTargetBlank = true  # `true` opens external links in a new tab.
   fractions = true  # `false` disables smart fractions (e.g. 5/12 formatted as a fraction).
@@ -44,24 +50,24 @@ defaultContentLanguageInSubdir = false
 [params]
   # Color theme.
   #   Choose from `default`, `ocean`, `forest`, `coffee`, `dark`, or `1950s`.
-  color_theme = "dark"
+  color_theme = "default"
 
   # Font style.
   #   Choose from `default`, `classic`, or `playfair`.
   font = "default"
 
   # Your details.
-  name = "Ryan Hill"
-  role = "Watershed Ecologist"
+  name = "Prateek Vishnoi"
+  role = "Department of Computer Science and Engineering"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "ORISE Postdoc", url = "" } ]
+  organizations = [ { name = "Indian Institute of Technology Kanpur", url = "" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
-  avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-  email = "ryan-ecol@gmail.com"
-  #address = "Building 1 Room 1, Stanford University, California, 90210, USA"
+  avatar = "pic.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
+  email = "pratvish@cse.iitk.ac.in"
+  address = "RM 511, Rajeev Motwani Building, CSE, IIT Kanpur"
   #office_hours = "Monday 10:00 to 13:00 or email for appointment"
   #phone = "888 888 88 88"
   #skype = "echo123"
@@ -99,7 +105,7 @@ defaultContentLanguageInSubdir = false
   longitude = "-122.1697"
   zoom = 15
 
-  # Date and time format (refer to Go's date format: http://fuckinggodateformat.com )
+  # Date and time format (refer to https://sourcethemes.com/academic/docs/customization/#date-format )
   #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
   date_format = "Jan 2, 2006"
   #   Examples: "3:04 pm" or "15:04"
@@ -127,9 +133,7 @@ defaultContentLanguageInSubdir = false
   #
   #   highlight_languages
   #     Add support for highlighting additional languages. Support for
-  #     languages mentioned here will be included in all pages. You
-  #     can also set this variable for a particular page in that
-  #     page's preamble.
+  #     languages mentioned here will be included in all pages.
   #
   #     Example: highlight_languages = ["go", "lisp", "ocaml"]
   #
@@ -144,7 +148,7 @@ defaultContentLanguageInSubdir = false
   #   https://cdnjs.com/libraries/highlight.js/
   #
   #   For more info on the highlighting options, see:
-  #   https://sourcethemes.com/academic/post/writing-markdown-latex/#highlighting-options
+  #   https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options
   highlight = true
   highlight_languages = []
   # highlight_style = "github"
@@ -152,9 +156,14 @@ defaultContentLanguageInSubdir = false
   # Enable native social sharing buttons?
   sharing = true
 
+  # Privacy pack
+  #   Show a cookie consent message to visitors
+  #   Anonymize IP in Google Analytics (if enabled)
+  privacy_pack = false
+
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
-  custom_css = ["blue.css"]
+  custom_css = []
   custom_js  = []
 
   # Publication types.
@@ -181,7 +190,7 @@ defaultContentLanguageInSubdir = false
 
   # Configuration of publication pages.
   [params.publications]
-    # Date format (refer to Go's date format: http://fuckinggodateformat.com )
+    # Date format (refer to https://sourcethemes.com/academic/docs/customization/#date-format )
     #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
     date_format = "January, 2006"
 
@@ -195,41 +204,54 @@ defaultContentLanguageInSubdir = false
     #   1 = Detailed
     #   2 = APA
     #   3 = MLA
-    publication_format = 0
+    publication_format = 3
 
   # Social/Academic Networking
   #
-  # Icon pack "fa" includes the following social network icons:
+  # Icon pack "fab" includes the following social network icons:
   #
   #   twitter, weibo, linkedin, github, facebook, pinterest, google-plus,
   #   youtube, instagram, soundcloud
   #
-  #   For email icon, use "fa" icon pack, "envelope" icon, and
+  #   For email icon, use "fas" icon pack, "envelope" icon, and
   #   "mailto:your@email.com" as the link.
   #
-  #   Full list: https://fortawesome.github.io/Font-Awesome/icons/
+  #   Full list: https://fontawesome.com/icons
   #
-  # Icon pack "ai" includes the following academic network icons:
+  # Icon pack "ai" includes the following academic icons:
   #
-  #   google-scholar, arxiv, orcid, researchgate, mendeley
+  #   cv, google-scholar, arxiv, orcid, researchgate, mendeley
   #
   #   Full list: https://jpswalsh.github.io/academicons/
 
+  #[[params.social]]
+   # icon = "envelope"
+    #icon_pack = "fas"
+    #link = "mailto:test@example.org"
+
+  
 
   [[params.social]]
     icon = "google-scholar"
     icon_pack = "ai"
-    link = "https://scholar.google.com/citations?user=fCBjxTcAAAAJ&hl=en"
-    
-  [[params.social]]
-    icon = "github"
-    icon_pack = "fa"
-    link = "//github.com/ryan-hill"
+    link = "https://scholar.google.co.in/citations?user=5HVIb1IAAAAJ&hl=en&oi=ao"
+	
+	[[params.social]]
+    icon = "facebook"
+    icon_pack = "fab"
+    link = "https://www.facebook.com/prateek.vishnoi.56"
 
-  [[params.social]]
-    icon = "researchgate"
-    icon_pack = "ai"
-    link = "https://www.researchgate.net/profile/Ryan_Hill5"
+ # [[params.social]]
+ #   icon = "github"
+ #   icon_pack = "fab"
+ #   link = "//github.com/casino89"
+
+  # Link to a PDF of your resume/CV from the About widget.
+  # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
+  # [[params.social]]
+  #   icon = "cv"
+  #   icon_pack = "ai"
+  #   link = "files/cv.pdf"
 
 # Navigation Links
 #   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
@@ -243,37 +265,54 @@ defaultContentLanguageInSubdir = false
   name = "Home"
   url = "#about"
   weight = 1
-  
-[[menu.main]]
-  name = "CV"
-  url = "/cv/ryanhill_cv_september2018.pdf"
-  weight = 2
-
 
 [[menu.main]]
-  name = "Publications"
-  url = "#publications"
+ name = "Publications"
+url = "#publications"
+weight = 2
+
+#[[menu.main]]
+ # name = "Posts"
+  #url = "#posts"
+  #weight = 3
+
+[[menu.main]]
+  name = "Projects"
+  url = "#projects"
+  weight = 4
+
+[[menu.main]]
+  name = "Teaching"
+  url = "#teaching"
   weight = 3
-
-#[[menu.main]]
-#  name = "Posts"
-#  url = "#posts"
-#  weight = 3
-
-#[[menu.main]]
-#  name = "Projects"
-#  url = "#projects"
-#  weight = 4
-
-#[[menu.main]]
-#  name = "Teaching"
-#  url = "#teaching"
-#  weight = 5
 
 [[menu.main]]
   name = "Contact"
   url = "#contact"
-  weight = 5
+  weight = 4
+
+# Link to a PDF of your resume/CV from the menu.
+# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
+# [[menu.main]]
+#    name = "CV"
+#    url = "files/cv.pdf"
+#    weight = 7
+
+# Search.
+[params.search]
+  # Search provider:
+  #   0: No search engine
+  #   1: Built-in (Fuse)
+  #   2: Algolia (https://www.algolia.com)
+  engine = 1
+
+  # Configuration of Algolia search engine.
+  # Paste the values from your Algolia dashboard.
+  [params.search.algolia]
+    app_id = ""
+    api_key = ""
+    index_name = ""
+    show_logo = false
 
 # Taxonomies.
 [taxonomies]
@@ -283,7 +322,20 @@ defaultContentLanguageInSubdir = false
 
 # Languages
 #   Create a [languages.X] block for each language you want, where X is the language ID.
+#   Refer to https://sourcethemes.com/academic/docs/language/
 
 # Configure the English version of the website.
-[Languages.en]
+[languages.en]
   languageCode = "en-us"
+
+# Uncomment the lines below to configure your website in a second language.
+#[languages.zh]
+#  languageCode = "zh-Hans"
+#  title = "Chinese website title..."
+#  [languages.zh.params]
+#    name = "Your name in Chinese..."
+#    role = "Your role in Chinese..."
+#  [[languages.zh.menu.main]]
+#    name = "Wo"
+#    url = "#about"
+#    weight = 1
