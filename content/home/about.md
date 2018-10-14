@@ -30,7 +30,7 @@ weight = 5
 
 # Biography
 <div align="justify">
-I’m a Ph.D. student at the <a href="https://www.cse.iitk.ac.in/">Department of Computer Science and Engineering</a>, <a href="https://www.iitk.ac.in/">Indian Institute of Technology, Kanpur</a>, working under the supervision of <a href="https://www.cse.iitk.ac.in/users/satyadev/">Dr. Satyadev Nandakumar</a>. 
+I’m a Ph.D. student at the <a href="https://www.cse.iitk.ac.in/">Department of Computer Science and Engineering</a>, <a href="https://www.iitk.ac.in/">Indian Institute of Technology, Kanpur</a>, working under the supervision of <a href="https://www.cse.iitk.ac.in/users/satyadev/">Dr. Satyadev Nandakumar</a>. <br>
 
 My area of interest lies broadly in <a href="https://en.wikipedia.org/wiki/Theoretical_computer_science">Theoretical Computer Science.</a> I am supported by <a href="https://phd.medialabasia.in/"> Visvesvaraya Ph.D. Scheme</a> offered by the Department of Electronics and Information Technology, Government of India.
 
