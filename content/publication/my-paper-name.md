@@ -1,7 +1,7 @@
 +++
 title = "Source Location Privacy using Multiple-Phantom Nodes in WSN"
 date = 2018-09-25T14:58:41+05:30
-draft = true
+draft = false
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors = ["Prabhat Kumar", "J.P Singh", "Prateek Vishnoi", "M.P Singh"]
