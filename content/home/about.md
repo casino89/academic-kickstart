@@ -34,5 +34,5 @@ weight = 5
 
 <p>My area of interest lies broadly in <a href="https://en.wikipedia.org/wiki/Theoretical_computer_science">Theoretical Computer Science.</a> I am supported by <a href="https://phd.medialabasia.in/"> Visvesvaraya Ph.D. Scheme</a> offered by the Department of Electronics and Information Technology, Government of India.</p>
 
-Prior to this, I have completed my Masters in <a href="http://www.nitp.ac.in/php/cse_dept.php">Computer Science and Engineering</a> from  <a href="http://www.nitp.ac.in/">National Institute of Technology, Patna.</a> During my Master’s, I have worked in the area of Wireless Sensor Networks and have published my thesis on Source Location Privacy in Wireless Sensor Networks.
+<p>Prior to this, I have completed my Masters in <a href="http://www.nitp.ac.in/php/cse_dept.php">Computer Science and Engineering</a> from  <a href="http://www.nitp.ac.in/">National Institute of Technology, Patna.</a> During my Master’s, I have worked in the area of Wireless Sensor Networks and have published my thesis on Source Location Privacy in Wireless Sensor Networks.</p>
 </div>
