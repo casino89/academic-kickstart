@@ -12,7 +12,7 @@ weight = 5
   interests = [
    
     "Theoretical Computer Science",
-    "Information Theory"
+    "Information theory"
   ]
 
 # List your qualifications (such as academic degrees).
